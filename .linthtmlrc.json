@@ -1,0 +1,9 @@
+{
+  "extends": "linthtml-config-htmlacademy",
+  "rules": {
+    "indent-width": [
+      true,
+      2
+    ]
+  }
+}

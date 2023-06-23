@@ -14,8 +14,6 @@
   font-size: 14px;
   line-height: 18px;
 }
-
-.page__body {
+.page.body {
   margin: auto;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,16 @@
+.field-group {
+  padding: 20px 0;
+  margin: 0;
+  border: none;
+
+  &__heading {
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+  }
+
+  &__list {
+    @include list;
+  }
+}

@@ -1,0 +1,22 @@
+.page-main {
+  &__heading {
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  &__subheading {
+    font-family: $font-heading;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__header-heading {
+    margin-bottom: 25px;
+  }
+
+  &__header-text {
+    margin-bottom: 29px;
+  }
+}

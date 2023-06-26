@@ -1,0 +1,25 @@
+.site-menu {
+  @include list;
+  font-family: $font-heading;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &__item {
+    padding: 23px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid $color-gray-150;
+
+    &:first-child {
+      border-top: 1px solid $color-gray-150;
+    }
+  }
+
+  &__link {
+    padding: 13px 35px;
+    color: $color-black;
+    text-decoration: none;
+  }
+}

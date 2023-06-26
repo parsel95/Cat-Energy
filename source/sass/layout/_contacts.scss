@@ -1,0 +1,18 @@
+.contacts {
+  padding: 20px;
+
+  &__heading {
+    color: $color-gray-900;
+
+    font-family: $font-heading;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__address {
+    color: $color-gray-700;
+
+    line-height: 20px;
+  }
+}

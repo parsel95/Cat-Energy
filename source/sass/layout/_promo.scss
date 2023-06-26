@@ -1,0 +1,28 @@
+.promo {
+  padding: 20px;
+
+  color: $color-white;
+  text-align: center;
+
+  background-color: $color-primary-500;
+  background-image: url("../img/Index/first-background-cat.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  &__heading {
+    @include null;
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  &__text {
+    @include null;
+    font-family: $font-heading;
+    line-height: 14px;
+    text-transform: uppercase;
+  }
+}

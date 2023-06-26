@@ -1,0 +1,8 @@
+.page-header {
+  &__container {
+    @include container;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,11 @@
+.process {
+  padding: 20px;
+
+  &__list {
+    @include list;
+  }
+
+  &__item {
+    color: $color-gray-700;
+  }
+}

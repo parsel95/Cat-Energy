@@ -1,0 +1,12 @@
+.switcher {
+  &__button {
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+
+    border: none;
+  }
+}

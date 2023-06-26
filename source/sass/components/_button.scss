@@ -6,4 +6,9 @@
   font-family: $font-heading;
   text-decoration: none;
   text-transform: uppercase;
+
+  &--secondary {
+    color: $color-gray-700;
+    background-color: $color-gray-50;
+  }
 }

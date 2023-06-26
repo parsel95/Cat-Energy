@@ -56,6 +56,10 @@
   text-decoration: none;
   text-transform: uppercase;
 }
+.button--secondary {
+  color: #444444;
+  background-color: #f2f2f2;
+}
 
 .switcher__button {
   font-family: "Oswald", "Arial", sans-serif;
@@ -104,6 +108,38 @@
   font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
+}
+
+.card__link {
+  text-decoration: none;
+}
+.card__heading {
+  color: #222222;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.card__title, .card__definition {
+  color: #444444;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card-row__heading {
+  color: #222222;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.card-row__definition {
+  color: #444444;
+  font-size: 14px;
+  line-height: 14px;
 }
 
 .promo {
@@ -219,6 +255,46 @@
 
 .form {
   padding: 20px;
+}
+
+.catalog-list {
+  padding: 20px;
+}
+
+.show-more__heading {
+  color: #111111;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.show-more__text {
+  color: #444444;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.catalog-additional {
+  padding: 20px;
+}
+.catalog-additional__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.offer {
+  background: #68b738 url("../img/catalog/background-gift.jpg") no-repeat center;
+  background-blend-mode: overlay;
+}
+.offer__text {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
 }
 
 .page-main__heading {

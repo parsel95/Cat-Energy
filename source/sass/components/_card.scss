@@ -1,0 +1,23 @@
+.card {
+  &__link {
+    text-decoration: none;
+  }
+
+  &__heading {
+    color: $color-gray-850;
+
+    font-family: $font-heading;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
+
+  &__title,
+  &__definition {
+    color: $color-gray-700;
+
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

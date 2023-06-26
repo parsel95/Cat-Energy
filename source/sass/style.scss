@@ -17,6 +17,9 @@
 @import "components/field-group";
 @import "components/field";
 @import "components/control";
+@import "components/card";
+@import "components/card-row";
+
 
 // layout
 // Папка layout/ содержит всё, что принимает участие в постройке раскладки сайта или приложения. Эта папка может содержать стили для основных частей сайта (шапка, подвал, навигация, боковая панель…), сетка или даже CSS-стили для всех форм.
@@ -27,6 +30,10 @@
 @import "layout/contacts";
 @import "layout/page-footer";
 @import "layout/form";
+@import "layout/catalog-list";
+@import "layout/show-more";
+@import "layout/catalog-additional";
+@import "layout/offer";
 @import "layout/page-main";
 @import "layout/page-header";
 

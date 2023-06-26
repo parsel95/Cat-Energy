@@ -1,0 +1,12 @@
+.offer {
+  background: $color-primary-500 url("../img/catalog/background-gift.jpg") no-repeat center;
+  background-blend-mode: overlay;
+
+  &__text {
+    color: $color-white;
+
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+}

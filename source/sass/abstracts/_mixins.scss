@@ -15,10 +15,6 @@
   list-style-type: none;
 }
 
-@mixin container {
-  max-width: 280px;
-}
-
 @mixin null {
   margin: 0;
   padding: 0;

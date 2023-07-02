@@ -1,0 +1,42 @@
+.logo {
+  @media (max-width: $mobile-width-only) {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__image {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__sign {
+    justify-self: center;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__united {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+
+  &__full {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      display: block;
+    }
+  }
+}

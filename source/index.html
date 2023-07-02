@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat enegry: функциональное питание для котов</title>
     <link rel="stylesheet" href="./css/style.css">
   </head>
@@ -9,10 +10,12 @@
   <body class="page__body">
     <header class="page__header page-header">
       <nav class="page-header__nav">
-        <div class="page-header__container">
+        <div class="page-header__bar">
           <a class="page-header__logo logo" href="index.html">
             <img class="logo__image" src="./img/Index/logo-image.svg" alt="Cat energy" width="33.3" height="37.6">
             <img class="logo__sign" src="./img/Index/logo-sign.svg" alt="Cat energy" width="101"  height="18" aria-hidden="true">
+            <img class="logo__united" src="./img/Index/logo-united.svg" alt="Cat Energy" width="174" height="51.7">
+            <img class="logo__full" src="./img/Index/logo-full.svg" alt="Cat Energy" width="202" height="59">
           </a>
 
           <button class="page-header__toggle" type="button">
@@ -36,10 +39,17 @@
 
     <main class="page__main page-main">
       <header class="page-main__header promo">
-        <div class="container">
+        <div class="promo__container container">
           <h1 class="promo__heading page-main__header-heading">Функциональное питание для котов</h1>
-          <p class="promo__text page-main__header-heading">Занялся собой? Займись котом!</p>
+
+          <p class="promo__text page-main__header-text">Занялся собой? Займись котом!</p>
+
           <img class="promo__image" src="./img/Index/can-cat-energy.png" alt="Банка куриного корма Cat Energy Pro на 500 грамм" width="280" height="270">
+
+          <img class="promo__image promo__image--medium" src="./img/Index/can-cat-energy-medium.png" alt="Банка куриного корма Cat Energy Pro на 500 грамм" width="708" height="609">
+
+          <img class="promo__image promo__image--large" src="./img/Index/can-cat-energy-large.png" alt="Банка куриного корма Cat Energy Pro на 500 грамм" width="552" height="499">
+
           <a class="promo__button button" href="./form.html">Подобрать программу</a>
         </div>
       </header>
@@ -47,30 +57,34 @@
       <section class="page-main__section catalog-sections">
         <h2 class="visually-hidden">Разделы каталога</h2>
 
-        <div class="container">
+        <div class="catalog-sections__container container">
           <article class="catalog-sections__item">
-            <h3 class="catalog-sections__heading">Похудение</h3>
-            <p class="catalog-sections__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a class="catalog-sections__link" href="#">Каталог slim</a>
+            <div class="catalog-sections__wrapper">
+              <h3 class="catalog-sections__heading">Похудение</h3>
+              <p class="catalog-sections__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+              <a class="catalog-sections__link" href="#">Каталог slim</a>
+            </div>
           </article>
 
           <article class="catalog-sections__item">
-            <h3 class="catalog-sections__heading">Набор массы</h3>
-            <p class="catalog-sections__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a class="catalog-sections__link" href="#">Каталог pro</a>
+            <div class="catalog-sections__wrapper">
+              <h3 class="catalog-sections__heading">Набор массы</h3>
+              <p class="catalog-sections__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+              <a class="catalog-sections__link" href="#">Каталог pro</a>
+            </div>
           </article>
         </div>
       </section>
 
       <section class="page-main__section process">
-        <div class="container">
-          <h2 class="page-main__heading">Как это работает</h2>
+        <div class="process__container container">
+          <h2 class="page-main__heading process__heading ">Как это работает</h2>
 
           <ol class="process__list">
-            <li class="process__item process__item_healthful">Функциональное питание содержит только полезные питательные вещества.</li>
-            <li class="process__item process__item_powder">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-            <li class="process__item process__item_meal">Замените один-два приема обычной еды на наше функциональное питание.</li>
-            <li class="process__item process__item_result">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+            <li class="process__item process__item--healthful">Функциональное питание содержит только полезные питательные вещества.</li>
+            <li class="process__item process__item--powder">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+            <li class="process__item process__item--meal">Замените один-два приема обычной еды на наше функциональное питание.</li>
+            <li class="process__item process__item--result">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
           </ol>
         </div>
       </section>

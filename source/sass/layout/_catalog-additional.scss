@@ -1,6 +1,13 @@
 .catalog-additional {
   padding: 20px;
 
+  &__heading {
+    font-family: $font-heading;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
   &__list {
     @include list;
   }

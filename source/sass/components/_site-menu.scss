@@ -1,25 +1,74 @@
 .site-menu {
   @include list;
   font-family: $font-heading;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 20px;
   text-align: center;
   text-transform: uppercase;
 
+  @media (max-width: $mobile-width-only) {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-self: flex-end;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
   &__item {
-    padding: 23px 0;
-    box-sizing: border-box;
-    border-bottom: 1px solid $color-gray-150;
+    display: flex;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 23px 0;
+      border-bottom: 1px solid $color-gray-150;
+    }
 
     &:first-child {
-      border-top: 1px solid $color-gray-150;
+      @media (max-width: $mobile-width-only) {
+        border-top: 1px solid $color-gray-150;
+      }
+    }
+
+    &:nth-child(3) a {
+      @media (min-width: $tablet-width) {
+        padding: 17px 0 10.7px 17px;
+      }
+    }
+
+    &--active {
+      @media (min-width: $tablet-width) {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $color-primary-500;
+        z-index: 5;
+      }
+
+      @media (min-width: $desktop-width) {
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $color-white;
+        z-index: 5;
+      }
     }
   }
 
   &__link {
-    padding: 13px 35px;
     color: $color-black;
     text-decoration: none;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 13px 35px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 17px 17px 10.7px 17px;
+    }
   }
 }

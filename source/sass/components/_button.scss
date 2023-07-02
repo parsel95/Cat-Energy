@@ -4,8 +4,22 @@
   border: none;
 
   font-family: $font-heading;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+    padding: 8px 0;
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: inline-block;
+    padding: 14px 26px;
+    font-size: 20px;
+    line-height: 20px;
+  }
 
   &--secondary {
     color: $color-gray-700;

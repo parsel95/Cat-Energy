@@ -1,9 +1,25 @@
 .page {
+  min-width: 320px;
+  height: 100%;
+
   font-family: $font-body;
   font-size: 14px;
   line-height: 18px;
 
   &__body {
-    margin: auto;
+    min-height: 100%;
+    margin: 0;
+    display: grid;
+    grid-template-rows: min-content 1fr min-content;
+  }
+
+  &__header {
+    @media (min-width: $tablet-width) {
+      padding: 24px 0 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 53px 0 0 0;
+    }
   }
 }

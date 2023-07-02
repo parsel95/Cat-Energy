@@ -1,11 +1,191 @@
 .process {
-  padding: 20px;
+  @media (max-width: $mobile-width-only) {
+    padding: 20px 0 49px 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 45px 0 47px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 71px 0 26px 0;
+  }
+
+  &__heading {
+    @media (max-width: $mobile-width-only) {
+      margin: 0 0 40px 0;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 32px 0;
+    }
+  }
 
   &__list {
     @include list;
+
+    display: grid;
+
+    @media (max-width: $mobile-width-only) {
+      gap: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      grid-template-columns: 1fr 1fr;
+      gap: 37px 0;
+      padding: 0 79px 0 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(4, min-content);
+      padding: 0;
+    }
   }
 
   &__item {
+    position: relative;
+    display: grid;
+
     color: $color-gray-700;
+
+    @media (max-width: $mobile-width-only) {
+      grid-template-columns: 60px 1fr;
+      gap: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 40px 0 57px 0;
+      gap: 31px;
+      grid-template-rows: min-content min-content;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    &::before {
+      @include pseudo($pos: static);
+      width: 60px;
+      height: 60px;
+
+      @media (min-width: $tablet-width) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &::after {
+      @include pseudo;
+
+      @media (min-width: $tablet-width) {
+        z-index: -1;
+        right: 0;
+        height: 280px;
+
+        color: $color-gray-50;
+
+        font-size: 280px;
+        font-family: $font-heading;
+        line-height: 280px;
+      }
+    }
+
+    &--healthful {
+      @media (min-width: $tablet-width) {
+        width: 238px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-right: 88px;
+      }
+
+
+      &::before {
+        background: url("../img/Index/leaf.svg") no-repeat center;
+
+        @media (min-width: $tablet-width) {
+          background: url("../img/Index/leaf-large.svg") no-repeat center;
+        }
+      }
+
+      &::after {
+        @media (min-width: $tablet-width) {
+          content: "1";
+          width: 112px;
+        }
+      }
+    }
+
+    &--powder {
+      @media (min-width: $tablet-width) {
+        width: 246px;
+        margin-left: auto;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-right: 77px;
+      }
+
+      &::before {
+        background: url("../img/Index/powder.svg") no-repeat center;
+
+        @media (min-width: $tablet-width) {
+          background: url("../img/Index/powder-large.svg") no-repeat center;
+        }
+      }
+
+      &::after {
+        @media (min-width: $tablet-width) {
+          content: "2";
+          width: 134px;
+        }
+      }
+    }
+
+    &--meal {
+      @media (min-width: $tablet-width) {
+        width: 247px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-right: 75px;
+      }
+
+      &::before {
+        background: url("../img/Index/meal.svg") no-repeat center;
+
+        @media (min-width: $tablet-width) {
+          background: url("../img/Index/meal-large.svg") no-repeat center;
+        }
+      }
+
+      &::after {
+        @media (min-width: $tablet-width) {
+          content: "3";
+          width: 134px;
+        }
+      }
+    }
+
+    &--result {
+      @media (min-width: $tablet-width) {
+        width: 249px;
+        margin-left: auto;
+      }
+
+      &::before {
+        background: url("../img/Index/result.svg") no-repeat center;
+
+        @media (min-width: $tablet-width) {
+          background: url("../img/Index/result-large.svg") no-repeat center;
+        }
+      }
+
+      &::after {
+        @media (min-width: $tablet-width) {
+          content: "4";
+          width: 136px;
+        }
+      }
+    }
   }
 }

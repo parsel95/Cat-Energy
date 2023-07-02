@@ -1,15 +1,34 @@
 .promo {
-  padding: 20px;
-
   color: $color-white;
-  text-align: center;
 
-  background-color: $color-primary-500;
-  background-image: url("../img/Index/first-background-cat.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: overlay;
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../img/Index/promo-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    background: none;
+  }
+
+  &__container {
+    position: relative;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 27px 0 0 0;
+      margin-bottom: 172px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 64px 0 526px 87px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 111px 0 185px 80px;
+    }
+  }
 
   &__heading {
     @include null;
@@ -17,6 +36,18 @@
     font-weight: 400;
     font-size: 36px;
     line-height: 36px;
+
+    @media (max-width: $mobile-width-only) {
+      text-align: center;
+    }
+
+    @media (min-width: $tablet-width) {
+      max-width: 416px;
+      color: $color-black;
+
+      font-size: 60px;
+      line-height: 60px;
+    }
   }
 
   &__text {
@@ -24,5 +55,59 @@
     font-family: $font-heading;
     line-height: 14px;
     text-transform: uppercase;
+
+    @media (max-width: $mobile-width-only) {
+      text-align: center;
+    }
+
+    @media (min-width: $tablet-width) {
+      color: $color-black;
+
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &__image {
+    @media (max-width: $mobile-width-only) {
+      position: absolute;
+      top: 167px;
+    }
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    &--medium {
+      display: none;
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+        position: absolute;
+        z-index: -1;
+        top: 265px;
+        left: 0;
+        display: block;
+      }
+    }
+
+    &--large {
+      display: none;
+
+      @media (min-width: $desktop-width) {
+        display: block;
+        position: absolute;
+        z-index: -1;
+        top: 29px;
+        right: 220px;
+      }
+    }
+  }
+
+  &__button {
+    @media (max-width: $mobile-width-only) {
+      position: relative;
+      top: 172px;
+    }
   }
 }
+

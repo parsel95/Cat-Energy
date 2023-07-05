@@ -5,4 +5,13 @@
   font-weight: 400;
   font-size: 16px;
   text-transform: uppercase;
+
+  &--checkbox {
+    color: $color-black;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: normal;
+  }
 }

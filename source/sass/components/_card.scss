@@ -1,4 +1,24 @@
 .card {
+  position: relative;
+  display: grid;
+
+  @media (max-width: $mobile-width-only) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content min-content min-content;
+    padding: 19px 0 25px 0;
+  }
+
+  &::before {
+    @media (max-width: $mobile-width-only) {
+      @include pseudo;
+      top: 0;
+      margin-left: calc(50% - 50vw);
+      width: 100vw;
+      height: 1px;
+      background-color: $color-gray-100;
+    }
+  }
+
   &__link {
     text-decoration: none;
   }
@@ -8,16 +28,65 @@
 
     font-family: $font-heading;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
     text-transform: uppercase;
+
+    @media (max-width: $mobile-width-only) {
+      align-self: start;
+      max-width: 76px;
+      margin: 0 0 14px 0;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+    }
   }
 
-  &__title,
-  &__definition {
+  &__img {
+    order: 1;
+    align-self: center;
+    justify-self: center;
+
+    @media (max-width: $mobile-width-only) {
+      grid-column: 1/2;
+      grid-row: 1/3;
+    }
+  }
+
+  &__list {
+    @include list;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 0 10px;
+
     color: $color-gray-700;
 
-    font-size: 12px;
-    line-height: 16px;
+    @media (max-width: $mobile-width-only) {
+      padding-bottom: 9px;
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: 16px;
+    }
+  }
+
+  &__definition {
+    margin: 0;
+    text-align: right;
+  }
+
+  &__button {
+    @media (max-width: $mobile-width-only) {
+      grid-column: 1/3;
+      margin: 13px 0 0 0;
+    }
   }
 }

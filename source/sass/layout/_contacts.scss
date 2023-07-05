@@ -1,16 +1,93 @@
 .contacts {
-  &__heading {
-    color: $color-gray-900;
+  &--background--grey {
+    background-color: $color-gray-50;
+  }
 
+  &__container {
+    position: relative;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 22px 0 26px 0;
+
+    @media (min-width: $tablet-width) {
+      padding: 60px 40px 56px 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      top: 95px;
+      left: 0;
+      z-index: 1;
+      width: 565px;
+      padding: 60px 80px 56px 80px;
+
+      background-color: $color-white;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+
+    color: $color-gray-900;
     font-family: $font-heading;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      max-width: 171px;
+      font-size: 20px;
+      line-height: 26px;
+    }
   }
 
   &__address {
-    color: $color-gray-700;
+    max-width: 160px;
+    margin: 0;
+    justify-self: flex-end;
 
+    color: $color-gray-700;
     line-height: 20px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      text-align: right;
+    }
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__map {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    &--medium {
+      display: none;
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+        display: block;
+        width: 100vw;
+        object-fit: cover;
+      }
+    }
+
+    &--large {
+      display: none;
+
+      @media (min-width: $desktop-width) {
+        display: block;
+        width: 100vw;
+        object-fit: cover;
+      }
+    }
   }
 }

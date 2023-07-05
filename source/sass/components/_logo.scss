@@ -12,14 +12,6 @@
     }
   }
 
-  &__sign {
-    justify-self: center;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
   &__united {
     display: none;
 

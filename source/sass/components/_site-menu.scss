@@ -22,6 +22,7 @@
 
   &__item {
     display: flex;
+    justify-content: center;
 
     @media (max-width: $mobile-width-only) {
       padding: 23px 0;
@@ -48,13 +49,11 @@
         text-decoration-color: $color-primary-500;
         z-index: 5;
       }
+    }
 
+    &--active--white {
       @media (min-width: $desktop-width) {
-        text-decoration: underline;
-        text-underline-offset: 10px;
-        text-decoration-thickness: 2px;
         text-decoration-color: $color-white;
-        z-index: 5;
       }
     }
   }

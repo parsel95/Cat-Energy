@@ -1,28 +1,48 @@
 .promo {
-  color: $color-white;
+  text-align: center;
 
   @media (max-width: $mobile-width-only) {
-    background-image: url("../img/Index/promo-background.jpg");
+    padding-top: 27px;
+
+    color: $color-white;
+    background-color: $color-primary-800;
+    background-image: url("../img/Index/promo-background.jpg"), linear-gradient($color-primary-800 0, $color-primary-800 302px, $color-white 302px);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-position: 50% 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 64.3px;
+
+    text-align: left;
   }
 
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-    background: none;
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    padding-top: 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -200px;
+      right: 0;
+      bottom: 0;
+      left: 50%;
+      z-index: -2;
+
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-image: url("../img/Index/promo-background-large.jpg");
+    }
   }
 
   &__container {
     position: relative;
 
-    @media (max-width: $mobile-width-only) {
-      padding: 27px 0 0 0;
-      margin-bottom: 172px;
-    }
-
     @media (min-width: $tablet-width) {
-      padding: 64px 0 526px 87px;
+      padding: 0 0 526px 87px;
     }
 
     @media (min-width: $desktop-width) {
@@ -38,15 +58,19 @@
     line-height: 36px;
 
     @media (max-width: $mobile-width-only) {
-      text-align: center;
+      margin-bottom: 25px;
     }
 
     @media (min-width: $tablet-width) {
+      margin-bottom: 41px;
       max-width: 416px;
-      color: $color-black;
 
       font-size: 60px;
       line-height: 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 40px;
     }
   }
 
@@ -57,23 +81,22 @@
     text-transform: uppercase;
 
     @media (max-width: $mobile-width-only) {
-      text-align: center;
+      margin-bottom: 29px;
     }
 
     @media (min-width: $tablet-width) {
-      color: $color-black;
+      margin-bottom: 49px;
 
       font-size: 20px;
       line-height: 20px;
     }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 52px;
+    }
   }
 
   &__image {
-    @media (max-width: $mobile-width-only) {
-      position: absolute;
-      top: 167px;
-    }
-
     @media (min-width: $tablet-width) {
       display: none;
     }
@@ -84,7 +107,7 @@
       @media (min-width: $tablet-width) and (max-width: $desktop-width) {
         position: absolute;
         z-index: -1;
-        top: 265px;
+        bottom: 0;
         left: 0;
         display: block;
       }
@@ -100,13 +123,6 @@
         top: 29px;
         right: 220px;
       }
-    }
-  }
-
-  &__button {
-    @media (max-width: $mobile-width-only) {
-      position: relative;
-      top: 172px;
     }
   }
 }

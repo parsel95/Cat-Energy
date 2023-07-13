@@ -1,5 +1,19 @@
 .page-header {
+  @media (min-width: $tablet-width) {
+    padding: 24px 0 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 53px 0 0 0;
+  }
+
   &__nav {
+    @media (max-width: $mobile-width-only) {
+      &:not(.page-header__nav--main) {
+        border-bottom: 1px solid $color-gray-150;
+      }
+    }
+
     @media (min-width: $tablet-width) {
       width: 708px;
       margin: 0 auto;
@@ -12,31 +26,25 @@
       width: 1220px;
       grid-template-columns: 202px 1fr;
     }
+
+    &--main {
+      @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 202px 50%;
+        justify-content: space-between;
+      }
+    }
   }
 
   &__bar {
     @media (max-width: $mobile-width-only) {
       min-width: 320px;
       margin: 0 auto;
-      padding: 10px 20px 17.4px 20px;
+      padding: 12px 20px 15px;
       display: grid;
       grid-template-columns: 34px 1fr 34px;
       align-items: center;
       gap: 16px;
-    }
-  }
-
-  &__last-line {
-    width: 100vw;
-    height: 1px;
-    background-color: $color-gray-200;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-
-    &--disable {
-      display: none;
     }
   }
 
@@ -52,9 +60,73 @@
     }
   }
 
-  &__toggle {
+  &__toggler {
+    position: relative;
+
+    @media (max-width: $mobile-width-only) {
+      width: 40px;
+      height: 38px;
+      margin-right: -2px;
+
+      background-color: transparent;
+      border: none;
+
+      .page-header__nav--closed &::before {
+        @include pseudo;
+
+        top: 10px;
+        right: 6px;
+        width: 24px;
+        height: 1.5px;
+        background-color: $color-black;
+        box-shadow: 0 8px 0 0 $color-black, 0 16px 0 0 $color-black;
+      }
+
+      .page-header__nav--opened &::before,
+      .page-header__nav--opened &::after {
+        @include pseudo;
+
+        right: 6px;
+
+        width: 24px;
+        height: 1.5px;
+
+        background-color: $color-black;
+      }
+
+      .page-header__nav--opened &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+      .page-header__nav--opened &::after {
+        transform: rotate(-45deg);
+      }
+    }
+
     @media (min-width: $tablet-width) {
       display: none;
+    }
+  }
+
+  &__menu {
+    @media (max-width: $mobile-width-only) {
+      .page-header__nav--closed & {
+        display: none;
+      }
+
+      .page-header__nav--opened & {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+        display: block;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-right: -17px;
     }
   }
 }

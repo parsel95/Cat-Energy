@@ -12,14 +12,4 @@
     display: grid;
     grid-template-rows: min-content 1fr min-content;
   }
-
-  &__header {
-    @media (min-width: $tablet-width) {
-      padding: 24px 0 0 0;
-    }
-
-    @media (min-width: $desktop-width) {
-      padding: 53px 0 0 0;
-    }
-  }
 }

@@ -27,13 +27,15 @@
     display: grid;
 
     @media (max-width: $mobile-width-only) {
-      gap: 20px;
+      row-gap: 20px;
     }
 
     @media (min-width: $tablet-width) {
       grid-template-columns: 1fr 1fr;
       gap: 37px 0;
       padding: 0 79px 0 0;
+
+      counter-reset: process;
     }
 
     @media (min-width: $desktop-width) {
@@ -44,13 +46,14 @@
 
   &__item {
     position: relative;
+
     display: grid;
 
     color: $color-gray-700;
 
     @media (max-width: $mobile-width-only) {
       grid-template-columns: 60px 1fr;
-      gap: 20px;
+      column-gap: 20px;
     }
 
     @media (min-width: $tablet-width) {
@@ -60,12 +63,18 @@
 
       font-size: 16px;
       line-height: 24px;
+
+      counter-increment: process;
     }
 
     &::before {
       @include pseudo($pos: static);
       width: 60px;
       height: 60px;
+
+      background-color: $color-primary-500;
+      background-repeat: no-repeat;
+      background-position: center;
 
       @media (min-width: $tablet-width) {
         width: 80px;
@@ -74,12 +83,12 @@
     }
 
     &::after {
-      @include pseudo;
-
       @media (min-width: $tablet-width) {
+        position: absolute;
+        content: counter(process);
         z-index: -1;
+        top: 0;
         right: 0;
-        height: 280px;
 
         color: $color-gray-50;
 
@@ -98,20 +107,8 @@
         margin-right: 88px;
       }
 
-
       &::before {
-        background: url("../img/Index/leaf.svg") no-repeat center;
-
-        @media (min-width: $tablet-width) {
-          background: url("../img/Index/leaf-large.svg") no-repeat center;
-        }
-      }
-
-      &::after {
-        @media (min-width: $tablet-width) {
-          content: "1";
-          width: 112px;
-        }
+        background-image: url("../img/index/icons/leaf.svg");
       }
     }
 
@@ -126,18 +123,7 @@
       }
 
       &::before {
-        background: url("../img/Index/powder.svg") no-repeat center;
-
-        @media (min-width: $tablet-width) {
-          background: url("../img/Index/powder-large.svg") no-repeat center;
-        }
-      }
-
-      &::after {
-        @media (min-width: $tablet-width) {
-          content: "2";
-          width: 134px;
-        }
+        background-image: url("../img/index/icons/powder.svg");
       }
     }
 
@@ -151,40 +137,18 @@
       }
 
       &::before {
-        background: url("../img/Index/meal.svg") no-repeat center;
-
-        @media (min-width: $tablet-width) {
-          background: url("../img/Index/meal-large.svg") no-repeat center;
-        }
-      }
-
-      &::after {
-        @media (min-width: $tablet-width) {
-          content: "3";
-          width: 134px;
-        }
+        background-image: url("../img/index/icons/meal.svg");
       }
     }
 
     &--result {
       @media (min-width: $tablet-width) {
-        width: 249px;
+        width: 245px;
         margin-left: auto;
       }
 
       &::before {
-        background: url("../img/Index/result.svg") no-repeat center;
-
-        @media (min-width: $tablet-width) {
-          background: url("../img/Index/result-large.svg") no-repeat center;
-        }
-      }
-
-      &::after {
-        @media (min-width: $tablet-width) {
-          content: "4";
-          width: 136px;
-        }
+        background-image: url("../img/index/icons/result.svg");
       }
     }
   }

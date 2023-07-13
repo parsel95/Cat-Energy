@@ -3,42 +3,14 @@
 
   &__container {
     @media (min-width: $tablet-width) {
-      display: flex;
-      padding: 40px 0 40px 0;
-    }
-  }
-
-  &__logo {
-    display: flex;
-    align-items: center;
-
-    @media (max-width: $mobile-width-only) {
-      padding: 39px 0 32px 0;
-      justify-content: center;
-      border-bottom: 1px solid $color-gray-200;
-    }
-
-    @media (min-width: $tablet-width) {
-      margin-right: 144px;
-      padding: 16px 0;
+      display: grid;
+      grid-template-columns: 164px 1fr 164px;
+      gap: 16px;
+      padding: 46px 0 45px 0;
     }
 
     @media (min-width: $desktop-width) {
-      margin-right: 401px;
-    }
-  }
-
-  &__social {
-    @media (max-width: $mobile-width-only) {
-      min-height: 63px;
-    }
-
-    @media (min-width: $tablet-width) {
-      margin-right: auto;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-right: auto;
+      padding: 44px 0 43px 0;
     }
   }
 }

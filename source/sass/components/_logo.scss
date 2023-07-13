@@ -1,9 +1,34 @@
 .logo {
-  @media (max-width: $mobile-width-only) {
-    display: grid;
-    grid-template-columns: 34px 1fr;
+  &:not(.logo--footer) {
+    @media (max-width: $mobile-width-only) {
+      display: grid;
+      grid-template-columns: 34px 1fr;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  &--footer {
+    display: flex;
     align-items: center;
-    gap: 16px;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 39px 0 32px 0;
+      justify-content: center;
+      border-bottom: 1px solid $color-gray-200;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 16px 0;
+    }
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 
   &__image {

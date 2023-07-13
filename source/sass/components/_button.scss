@@ -17,9 +17,13 @@
 
     @media (min-width: $tablet-width) {
       display: inline-block;
-      padding: 17px 26px;
+      padding: 17px 30px;
       font-size: 20px;
       line-height: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 17px 27px;
     }
   }
 

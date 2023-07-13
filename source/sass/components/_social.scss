@@ -2,7 +2,9 @@
   @include list;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  padding: 12px 0;
 
   @media (max-width: $mobile-width-only) {
     border-bottom: 1px solid $color-gray-200;
@@ -11,7 +13,7 @@
   &__link {
     display: flex;
     align-items: center;
-    height: 100%;
+    min-height: 38px;
 
     @media (max-width: $mobile-width-only) {
       padding: 0 17.5px;
@@ -20,18 +22,55 @@
     @media (min-width: $tablet-width) {
       padding: 0 12px;
     }
-  }
 
-  &__icon {
-    &--small {
-      @media (min-width: $tablet-width) {
-        display: none;
+    &:hover {
+      path:not(.social__path--facebook) {
+        fill: $color-primary-500;
       }
     }
 
-    &--large {
-      @media (max-width: $mobile-width-only) {
-        display: none;
+    &:active {
+      opacity: 0.3;
+
+      path:not(.social__path--facebook) {
+        fill: $color-primary-500;
+      }
+    }
+
+    &--facebook {
+      &:hover {
+        path {
+          stroke: $color-primary-500;
+        }
+      }
+
+      &:active {
+        path {
+          stroke: $color-primary-500;
+        }
+      }
+    }
+  }
+
+  &__icon {
+    &--vk {
+      @media (min-width: $tablet-width) {
+        width: 30px;
+        height: 22px;
+      }
+    }
+
+    &--instagram {
+      @media (min-width: $tablet-width) {
+        width: 23px;
+        height: 23px;
+      }
+    }
+
+    &--facebook {
+      @media (min-width: $tablet-width) {
+        width: 28px;
+        height: 33px;
       }
     }
   }

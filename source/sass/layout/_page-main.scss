@@ -2,33 +2,50 @@
   position: relative;
 
   &__header {
-    margin-bottom: 82px;
-  }
-
-  &__footer {
     @media (max-width: $mobile-width-only) {
-      position: relative;
-      top: 4px;
-    }
-  }
-
-  &__heading-wrapper {
-    @media (max-width: $mobile-width-only) {
-      padding: 27px 0 41px 0;
+      margin-bottom: 20px;
     }
 
     @media (min-width: $tablet-width) {
-      padding: 64.3px 0 82px 0;
+      margin-bottom: 0;
     }
 
     @media (min-width: $desktop-width) {
-      padding: 74px 0 84px 0;
+      margin-bottom: 82px;
+    }
+
+    .page-main--catalog & {
+      @media (max-width: $mobile-width-only) {
+        margin-bottom: 41px;
+      }
+
+      @media (min-width: $tablet-width) {
+        padding-top: 64.3px;
+        margin-bottom: 82px;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-top: 74px;
+        margin-bottom: 84px;
+      }
+    }
+
+    .page-main--form & {
+      @media (max-width: $mobile-width-only) {
+        margin-bottom: 39px;
+      }
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 66px;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-top: 73.5px;
+      }
     }
   }
 
   &__heading {
-    margin: 0;
-
     font-family: $font-heading;
     font-weight: 400;
     font-size: 36px;
@@ -38,9 +55,25 @@
       font-size: 60px;
       line-height: 60px;
     }
+
+    .page-main--form & {
+      @media (max-width: $mobile-width-only) {
+        margin-bottom: 37px;
+      }
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 54px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 56px;
+      }
+    }
   }
 
   &__subheading {
+    margin: 0;
+
     font-family: $font-heading;
     font-weight: 400;
     text-transform: uppercase;
@@ -48,34 +81,6 @@
     @media (min-width: $tablet-width) {
       font-size: 20px;
       line-height: 30px;
-    }
-  }
-
-  &__header-heading {
-    @media (max-width: $mobile-width-only) {
-      margin-bottom: 25px;
-    }
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 41px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 40px;
-    }
-  }
-
-  &__header-text {
-    @media (max-width: $mobile-width-only) {
-      margin-bottom: 164px;
-    }
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 49px;
-    }
-
-    @media (min-width: $desktop-width) {
-      margin-bottom: 52px;
     }
   }
 }

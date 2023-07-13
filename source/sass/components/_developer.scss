@@ -16,4 +16,18 @@
       margin-right: 22px;
     }
   }
+
+  &:hover {
+    path {
+      fill: $color-primary-500;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    path {
+      fill: $color-primary-500;
+    }
+  }
 }

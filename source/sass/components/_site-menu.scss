@@ -92,7 +92,9 @@
     @media (min-width: $desktop-width) {
       padding: 17px 18px 12px 17px;
 
-      color: $color-white;
+      .site-menu--main & {
+        color: $color-white;
+      }
     }
   }
 }

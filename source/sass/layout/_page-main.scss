@@ -16,6 +16,7 @@
 
     .page-main--catalog & {
       @media (max-width: $mobile-width-only) {
+        padding-top: 25px;
         margin-bottom: 41px;
       }
 
@@ -32,10 +33,12 @@
 
     .page-main--form & {
       @media (max-width: $mobile-width-only) {
+        padding-top: 27px;
         margin-bottom: 39px;
       }
 
       @media (min-width: $tablet-width) {
+        padding-top: 64.3px;
         margin-bottom: 66px;
       }
 
@@ -58,16 +61,23 @@
 
     .page-main--form & {
       @media (max-width: $mobile-width-only) {
+        margin: 0;
         margin-bottom: 37px;
       }
 
       @media (min-width: $tablet-width) {
+        margin: 0;
         margin-bottom: 54px;
       }
 
       @media (min-width: $desktop-width) {
+        margin: 0;
         margin-bottom: 56px;
       }
+    }
+
+    .page-main--catalog & {
+      margin: 0;
     }
   }
 
@@ -81,6 +91,16 @@
     @media (min-width: $tablet-width) {
       font-size: 20px;
       line-height: 30px;
+    }
+
+    .page-main--form & {
+      @media (max-width: $mobile-width-only) {
+        padding: 0 20px 0;
+      }
+
+      @media (min-width: $tablet-width) {
+        max-width: 323px;
+      }
     }
   }
 }

@@ -18,6 +18,10 @@
   &__list {
     @include list;
 
+    &--cat {
+      padding: 22px 0 24px;
+    }
+
     &--contacts {
       @media (min-width: $desktop-width) {
         display: grid;

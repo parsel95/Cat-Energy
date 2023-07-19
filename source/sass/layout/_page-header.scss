@@ -19,7 +19,7 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 174px 1fr;
-      gap: 16px;
+      gap: 0 16px;
     }
 
     @media (min-width: $desktop-width) {

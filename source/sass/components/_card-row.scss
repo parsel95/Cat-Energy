@@ -1,28 +1,85 @@
 .card-row {
-  &__heading {
-    color: $color-gray-850;
+  padding: 12px 0 18px;
+  border-top: 1px solid $color-gray-250;
 
+  &:last-child {
+    border-bottom: 1px solid $color-gray-250;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 0 38px;
+    padding: 28px 37.5px 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 27.3%;
+    gap: 0 38px;
+    padding: 14px 0 17px;
+  }
+
+  &__heading {
+    margin: 0;
+    margin-bottom: 13px;
+
+    color: $color-gray-850;
     font-family: $font-heading;
     font-weight: 400;
     font-size: 16px;
     line-height: 16px;
-    text-align: center;
     text-transform: uppercase;
 
     @media (min-width: $tablet-width) {
+      margin-bottom: 23px;
+
       font-size: 20px;
       line-height: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: auto 0;
+    }
+  }
+
+  &__list {
+    @include list;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-width) {
+      justify-self: end;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 15px 0 0;
     }
   }
 
   &__definition {
-    color: $color-gray-700;
+    margin: 0;
 
+    color: $color-gray-700;
     line-height: 14px;
 
     @media (min-width: $tablet-width) {
+      margin-left: 49px;
+
       font-size: 16px;
       line-height: 20px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
+  }
+
+  &__button {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width) {
+      grid-column: 1/3;
     }
   }
 }

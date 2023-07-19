@@ -1,4 +1,16 @@
 .catalog-list {
+  @media (max-width: $mobile-width-only) {
+    border-bottom: 1px solid $color-gray-100;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 66px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 75px;
+  }
+
   &__container {
     @media (min-width: $tablet-width) {
       display: grid;
@@ -9,24 +21,6 @@
     @media (min-width: $desktop-width) {
       grid-template-columns: repeat(4, 245px);
       gap: 62px 80px;
-    }
-  }
-
-  &__show-more-plus {
-    @media (max-width: $mobile-width-only) {
-      margin: 0 0 23px 0;
-    }
-  }
-
-  &__show-more-heading {
-    @media (max-width: $mobile-width-only) {
-      margin: 0 0 8px 0;
-    }
-  }
-
-  &__show-more-text {
-    @media (max-width: $mobile-width-only) {
-      margin: 0 0 21px 0;
     }
   }
 }

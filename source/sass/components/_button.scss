@@ -1,34 +1,63 @@
 .button {
+  display: inline-block;
+  padding: 10px 12px;
+
   color: $color-white;
   background-color: $color-primary-500;
   border: none;
 
   font-family: $font-heading;
+  font-size: 16px;
+  line-height: 20px;
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
 
-  &--promo {
-    @media (max-width: $mobile-width-only) {
-      display: block;
-      padding: 11px 0;
-      width: 100%;
-    }
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
 
+  &:hover {
+    background-color: $color-primary-700;
+  }
+
+  &:active {
+    color: rgba($color-white, 0.3);
+    background-color: $color-primary-700;
+  }
+
+  &--large {
+    padding: 17px 27px;
+    font-size: 20px;
+
+    @media (max-width: $mobile-width-only) {
+      padding: 11px 27px;
+
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+
+  &--promo {
     @media (min-width: $tablet-width) {
       display: inline-block;
       padding: 17px 30px;
       font-size: 20px;
       line-height: 20px;
     }
-
-    @media (min-width: $desktop-width) {
-      padding: 17px 27px;
-    }
   }
 
   &--secondary {
     color: $color-gray-700;
     background-color: $color-gray-50;
+
+    &:hover {
+      background-color: $color-gray-100;
+    }
+
+    &:active {
+      color: rgba($color-gray-700, 0.3);
+      background-color: $color-gray-100;
+    }
   }
 }

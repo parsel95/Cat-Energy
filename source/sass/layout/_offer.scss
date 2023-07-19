@@ -1,12 +1,72 @@
 .offer {
-  background: $color-primary-500 url("../img/catalog/background-gift.jpg") no-repeat center;
-  background-blend-mode: overlay;
+  padding: 59px 61px 43px 58px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("../img/catalog/background-gift.jpg");
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width) {
+    position: relative;
+
+    padding: 73px 124px 69px 77px;
+
+    background-size: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 55.7px 43px 42.1px 41px;
+  }
 
   &__text {
-    color: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
+
+    max-width: 161px;
+    margin: 0;
+
+    color: $color-white;
     font-size: 16px;
     line-height: 20px;
     text-align: center;
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-width) {
+      display: block;
+      margin-left: auto;
+
+      text-align: left;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 78px;
+      height: 80px;
+
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-image: url("../img/Index/icons/gift.svg");
+      background-size: 78px 80px;
+
+      @media (max-width: $mobile-width-only) {
+        margin-bottom: 48px;
+      }
+
+      @media (min-width: $tablet-width) and (max-width: $tablet-width) {
+        position: absolute;
+        top: calc(50% - 40px);
+        left: 77px;
+      }
+
+      @media (min-width: $tablet-width) {
+        width: 80px;
+        height: 82.5px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 46.4px;
+      }
+    }
   }
 }

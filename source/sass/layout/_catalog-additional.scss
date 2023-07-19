@@ -1,24 +1,91 @@
 .catalog-additional {
-  &__container {
-    @media (min-width: $desktop-width) {
-      display: flex;
-      justify-content: space-between;
+  position: relative;
+
+  @media (max-width: $mobile-width-only) {
+    padding: 25px 0 0 0;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 76px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 86px;
+  }
+
+  &::before {
+    @include pseudo;
+    top: 39px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+
+    height: 2px;
+
+    background-color: $color-primary-500;
+
+    @media (min-width: $tablet-width) {
+      top: 22px;
     }
   }
 
   &__heading {
+    margin: 0;
+
     font-family: $font-heading;
     font-size: 24px;
     font-weight: 400;
     line-height: 24px;
 
+    background-color: $color-white;
+
+    @media (max-width: $mobile-width-only) {
+      position: relative;
+      left: -32px;
+
+      margin-bottom: 36px;
+      padding: 0 0 0 32px;
+    }
+
     @media (min-width: $tablet-width) {
+      display: inline-block;
+      padding: 0 36px 0 37px;
+      margin-bottom: 80px;
+
       font-size: 36px;
       line-height: 36px;
+    }
+
+    @media (min-width: $desktop-width) {
+      position: relative;
+      left: -40px;
+
+      padding: 0 36px 0 40px;
+    }
+  }
+
+  &__wrapper {
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 245px;
+      gap: 0 79px;
     }
   }
 
   &__list {
     @include list;
+
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 69px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 0;
+    }
   }
 }

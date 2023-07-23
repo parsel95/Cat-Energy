@@ -1,48 +1,72 @@
 .page-main {
   position: relative;
 
-  &__header {
+  &__section {
     @media (max-width: $mobile-width-only) {
-      margin-bottom: 20px;
+      &--catalog-additional {
+        margin-bottom: 35px;
+      }
     }
 
     @media (min-width: $tablet-width) {
-      margin-bottom: 0;
+      &--catalog-additional {
+        margin-bottom: 76px;
+      }
+
+      &--form {
+        margin-bottom: 69px;
+      }
     }
 
     @media (min-width: $desktop-width) {
-      margin-bottom: 82px;
-    }
+      &--catalog-additional {
+        margin-bottom: 86px;
+      }
 
-    .page-main--catalog & {
-      @media (max-width: $mobile-width-only) {
+      &--form {
+        margin-bottom: 81px;
+      }
+    }
+  }
+
+  &__header {
+    @media (max-width: $mobile-width-only) {
+      margin-bottom: 20px;
+
+      .page-main--catalog & {
         padding-top: 25px;
         margin-bottom: 41px;
       }
 
-      @media (min-width: $tablet-width) {
+      .page-main--form & {
+        padding-top: 25px;
+        margin-bottom: 39px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+
+      .page-main--catalog & {
         padding-top: 64.3px;
         margin-bottom: 82px;
       }
 
-      @media (min-width: $desktop-width) {
-        padding-top: 74px;
-        margin-bottom: 84px;
-      }
-    }
-
-    .page-main--form & {
-      @media (max-width: $mobile-width-only) {
-        padding-top: 27px;
-        margin-bottom: 39px;
-      }
-
-      @media (min-width: $tablet-width) {
+      .page-main--form & {
         padding-top: 64.3px;
         margin-bottom: 66px;
       }
+    }
 
-      @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 82px;
+
+      .page-main--catalog & {
+        padding-top: 74px;
+        margin-bottom: 84px;
+      }
+
+      .page-main--form & {
         padding-top: 73.5px;
       }
     }
@@ -54,24 +78,25 @@
     font-size: 36px;
     line-height: 40px;
 
+    @media (max-width: $mobile-width-only) {
+      .page-main--form & {
+        margin: 0;
+        margin-bottom: 35px;
+      }
+    }
+
     @media (min-width: $tablet-width) {
       font-size: 60px;
       line-height: 60px;
-    }
 
-    .page-main--form & {
-      @media (max-width: $mobile-width-only) {
-        margin: 0;
-        margin-bottom: 37px;
-      }
-
-      @media (min-width: $tablet-width) {
+      .page-main--form & {
         margin: 0;
         margin-bottom: 54px;
       }
+    }
 
-      @media (min-width: $desktop-width) {
-        margin: 0;
+    @media (min-width: $desktop-width) {
+      .page-main--form & {
         margin-bottom: 56px;
       }
     }
@@ -88,17 +113,17 @@
     font-weight: 400;
     text-transform: uppercase;
 
+    @media (max-width: $mobile-width-only) {
+      .page-main--form & {
+        padding: 0 20px 0 0;
+      }
+    }
+
     @media (min-width: $tablet-width) {
       font-size: 20px;
       line-height: 30px;
-    }
 
-    .page-main--form & {
-      @media (max-width: $mobile-width-only) {
-        padding: 0 20px 0;
-      }
-
-      @media (min-width: $tablet-width) {
+      .page-main--form & {
         max-width: 323px;
       }
     }

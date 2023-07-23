@@ -1,9 +1,18 @@
 .field {
-  color: $color-gray-700;
+  position: relative;
 
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0 13px;
+
+  color: $color-gray-700;
   font-family: $font-heading;
   font-size: 16px;
   font-weight: 400;
+
+  &--icon {
+    gap: 0 10px;
+  }
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -11,23 +20,76 @@
   }
 
   &__lead {
+    align-self: center;
     text-transform: uppercase;
   }
 
   &__input {
+
+    padding: 13px 15px 14px 15px;
+
     color: $color-gray-700;
     font-family: inherit;
     font-size: 16px;
     line-height: 18px;
 
+    border: 1px solid $color-gray-150;
+
+    .field--no--label & {
+      grid-column: 1/-1;
+      width: 100%;
+      min-height: 150px;
+      padding: 9px 15px 9px 14px;
+    }
+
     @media (min-width: $tablet-width) {
+      padding: 10px 20px;
+
       font-size: 20px;
       line-height: normal;
+
+      .field--no--label & {
+        min-height: 174px;
+        padding: 9px 18px 9px 18px;
+      }
+    }
+
+    .field--icon & {
+      padding-right: 46px;
+    }
+
+    &--invalid {
+      outline: 2px solid $color-error-500;
+      outline-offset: -2px;
     }
 
     &:placeholder {
       color: $color-gray-700;
       text-transform: uppercase;
+    }
+
+    &:hover {
+      border-color: $color-gray-250;
+    }
+
+    &:focus {
+      outline: 2px solid $color-gray-700;
+      outline-offset: -2px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    right: 14px;
+
+    align-self: center;
+
+    &--error {
+      color: $color-error-500;
+    }
+
+    .field__input:focus + & {
+      color: $color-primary-500;
     }
   }
 }

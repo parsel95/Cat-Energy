@@ -234,7 +234,7 @@
       overflow: hidden;
 
       img {
-        width: 594px;
+        width: 592px;
         height: 511px;
         max-width: none;
       }
@@ -245,26 +245,6 @@
         justify-content: end;
       }
     }
-
-    // @media (min-width: $tablet-width) {
-    //   display: none;
-    // }
-
-    // &--large {
-    //   display: none;
-
-    //   @media (min-width: $tablet-width) {
-    //     display: block;
-    //     margin: 0 auto;
-    //   }
-    // }
-
-    // &--skinny {
-    //   @media (min-width: $tablet-width) {
-    //     position: absolute;
-    //     top: 0;
-    //   }
-    // }
 
     &--active {
       display: block;

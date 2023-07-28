@@ -18,16 +18,16 @@
   }
 
   &:hover {
-    path {
-      fill: $color-primary-500;
+    .developer__image {
+      color: $color-primary-500;
     }
   }
 
   &:active {
     opacity: 0.3;
 
-    path {
-      fill: $color-primary-500;
+    .developer__image {
+      color: $color-primary-500;
     }
   }
 }

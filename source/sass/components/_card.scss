@@ -78,45 +78,14 @@
     }
   }
 
-  &__img {
+  &__img-wrapper {
     grid-area: img;
-    align-self: center;
+    align-self: end;
     justify-self: center;
+  }
 
-    @media (max-width: $mobile-width-only) {
-      &--small {
-        position: relative;
-        top: 8px;
-      }
-
-      &--large {
-        position: relative;
-        top: 5px;
-      }
-    }
-
-    @media (min-width: $tablet-width) {
-      &--small {
-        margin-top: 28px;
-        width: 161px;
-        height: 172px;
-      }
-
-      &--large {
-        width: 168px;
-        height: 206px;
-      }
-    }
-
-    @media (min-width: $desktop-width) {
-      &--small {
-        margin-top: 20px;
-      }
-
-      &--large {
-        margin-top: -9px;
-      }
-    }
+  &__img {
+    width: auto;
   }
 
   &__list {

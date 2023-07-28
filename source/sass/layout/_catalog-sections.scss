@@ -114,7 +114,7 @@
         width: 36px;
         height: 50px;
 
-        background-image: url("../img/Index/icons/cat-slim.svg");
+        background-image: url("../img/icons/cat-slim.svg");
 
         @media (min-width: $tablet-width) {
           top: 81px;
@@ -142,7 +142,7 @@
         width: 67px;
         height: 28px;
 
-        background-image: url("../img/Index/icons/cat-pro.svg");
+        background-image: url("../img/icons/cat-pro.svg");
 
         @media (min-width: $tablet-width) {
           top: 135px;
@@ -221,7 +221,7 @@
 
       background-repeat: no-repeat;
       background-position: 100% 50%;
-      background-image: url("../img/Index/icons/arrow.svg");
+      background-image: url("../img/icons/arrow.svg");
     }
 
     &:hover {

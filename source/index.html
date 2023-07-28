@@ -3,8 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat enegry: функциональное питание для котов</title>
+    <title>Cat Enegry: Функциональное питание для котов</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="icon" href="./img/favicon/icon-32.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="./img/favicon/apple-icon-180x180.png">
+    <link rel="manifest" href="./manifest.webmanifest">
   </head>
 
   <body class="page__body">
@@ -12,10 +16,12 @@
       <nav class="page-header__nav page-header__nav--main">
         <div class="page-header__bar">
           <a class="page-header__logo logo" href="index.html">
-            <img class="logo__image" src="./img/Index/logo-image.svg" alt="Cat energy" width="33.3" height="37.6">
-            <img class="page-header__sign logo__sign" src="./img/Index/logo-sign.svg" alt="Cat energy" width="101"  height="18" aria-hidden="true">
-            <img class="logo__united" src="./img/Index/logo-united.svg" alt="Cat Energy" width="174" height="51.7">
-            <img class="logo__full" src="./img/Index/logo-full.svg" alt="Cat Energy" width="202" height="59">
+            <picture>
+              <source media="(min-width: 1300px)" srcset="./img/logo-image-large.svg">
+              <source media="(min-width: 768px)" srcset="./img/logo-image-medium.svg">
+              <img class="logo__image" src="./img/logo-image.svg" alt="Cat energy" width="33.3" height="37.6">
+            </picture>
+            <img class="page-header__sign logo__sign" src="./img/logo-sign.svg" alt="Cat energy" width="101"  height="18" aria-hidden="true">
           </a>
 
           <button class="page-header__toggler" type="button">
@@ -44,11 +50,11 @@
 
           <p class="promo__text">Занялся собой? Займись котом!</p>
 
-          <img class="promo__image" src="./img/Index/can-cat-energy.png" alt="Банка куриного корма Cat Energy Pro на 500 грамм" width="280" height="270">
-
-          <img class="promo__image promo__image--medium" src="./img/Index/can-cat-energy-medium.png" alt="Банка куриного корма Cat Energy Pro на 500 грамм" width="708" height="609">
-
-          <img class="promo__image promo__image--large" src="./img/Index/can-cat-energy-large.png" alt="Банка куриного корма Cat Energy Pro на 500 грамм" width="552" height="499">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="./img/Index/can-cat-energy-medium.png 1x, img/Index/can-cat-energy-medium@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="./img/Index/can-cat-energy-large.png 1x, img/Index/can-cat-energy-large@2x.png 2x">
+            <img class="promo__image" src="./img/Index/can-cat-energy.png" srcset="./img/Index/can-cat-energy@2x.png 2x" alt="Банка куриного корма Cat Energy Pro на 500 грамм" width="280" height="270">
+          </picture>
 
           <a class="promo__button button button--large" href="./form.html">Подобрать программу</a>
         </div>
@@ -113,13 +119,17 @@
           <div class="example__right-part">
             <div class="example__imgages">
               <div class="example__image example__image--before example__image--active">
-                <img src="./img/Index/cat-before-mobile.png" alt="Кот до употребления корма: выглядит ленивым, толстым и страшным" width="280" height="232">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/Index/cat-fat-medium.png 1x, img/Index/cat-fat-medium@2x.png 2x">
+                  <img src="./img/Index/cat-fat-small.png" srcset="./img/Index/cat-fat-small@2x.png 2x"  alt="Кот до употребления корма: выглядит ленивым, толстым и страшным" width="280" height="232">
+                </picture>
               </div>
               <div class="example__image example__image--after" >
-                <img src="./img/Index/cat-after-mobile.png" alt="Кот после употребления корма: выглядит молодым, худым и бодрым" width="280" height="232">
+                <picture>
+                  <source media="(min-width: 768px)" srcset="./img/Index/cat-skinny-medium.png 1x, img/Index/cat-skinny-medium@2x.png 2x">
+                  <img src="./img/Index/cat-skinny-small.png" srcset="./img/Index/cat-skinny-small@2x.png 2x"  alt="Кот до употребления корма: выглядит ленивым, толстым и страшным" width="280" height="232">
+                </picture>
               </div>
-              <!-- <img class="example__image example__image--large example__image--fat" src="./img/Index/cat-fat.png" alt="Кот до употребления корма: выглядит ленивым, толстым и страшным" width="592" height="511">
-              <img class="example__image example__image--large example__image--skinny" src="./img/Index/cat-skinny.png" alt="Кот после употребления корма: выглядит молодым, худым и бодрым" width="592" height="511"> -->
             </div>
 
             <div class="example__switcher switcher switcher--before">
@@ -152,7 +162,7 @@
     <footer class="page__footer page-footer">
       <div class="page-footer__container container">
         <a class="page-footer__logo logo logo--footer" href="./index.html">
-          <img class="page-footer__sign logo__sign" src="./img/Index/logo-sign.svg" alt="Cat Energy" width="128" height="24">
+          <img class="page-footer__sign logo__sign" src="./img/logo-sign.svg" alt="Cat Energy" width="128" height="24">
         </a>
 
         <ul class="page-footer__social social">
@@ -185,8 +195,8 @@
         <a class="page-footer__developer developer" href="https://htmlacademy.ru/intensive/adaptive">
           <span class="visually-hidden">Разработано в HTML Academy</span>
           <span class="developer__text">HTML Academy</span>
-          <svg class="developer__image" width="27" height="34" viewBox="0 0 27 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="#666666"/>
+          <svg class="developer__image" width="27" height="34" viewBox="0 0 27 34">
+            <path d="M13.6426 0.0157537L13.5 0L0 1.40733V26.0129L13.5 34L27 26.0129V1.40733L13.6426 0.0157537ZM25.2344 25.0151L13.5 31.9573L1.76561 25.0151V14.9293L13.4507 21.8451L13.4701 23.0984L5.45351 18.3548L5.44295 19.5801L13.4894 24.3885L13.5088 25.675L5.46408 20.9174L5.45351 22.1427L13.5 26.9511L21.6239 22.1182V20.8929V16.909L25.2432 14.7595L25.2344 25.0151ZM25.2344 13.4519L22.0147 15.3319L20.5325 16.2071L13.4666 12.0201L13.456 13.2454L19.4957 16.818L19.4429 16.8495L19.3126 16.9247L18.4536 17.4166L13.4666 14.4689L13.456 15.6942L17.3921 18.0222L16.4591 18.6314L16.438 18.6436L13.4666 16.902L13.456 18.1273L15.4029 19.2615L13.4155 20.4483L1.7973 13.5762L13.4349 6.61831L25.2344 13.4519ZM25.2344 12.2266L13.4401 5.31075L1.76561 12.2196V2.9897L13.5 1.76442L25.2344 2.9897V12.2266Z" fill="currentColor"/>
           </svg>
         </a>
       </div>

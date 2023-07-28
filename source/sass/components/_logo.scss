@@ -8,6 +8,10 @@
     }
   }
 
+  img:not(.logo__sign) {
+    display: block;
+  }
+
   &--footer {
     display: flex;
     align-items: center;
@@ -32,28 +36,14 @@
   }
 
   &__image {
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
-  &__united {
-    display: none;
+    width: 33.3px;
 
     @media (min-width: $tablet-width) {
-      display: block;
+      width: 174px;
     }
 
     @media (min-width: $desktop-width) {
-      display: none;
-    }
-  }
-
-  &__full {
-    display: none;
-
-    @media (min-width: $desktop-width) {
-      display: block;
+      width: 202px;
     }
   }
 }

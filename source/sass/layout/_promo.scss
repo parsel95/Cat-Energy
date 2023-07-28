@@ -9,6 +9,11 @@
     background-image: url("../img/Index/promo-background.jpg"), linear-gradient($color-primary-800 0, $color-primary-800 302px, $color-white 302px);
     background-repeat: no-repeat;
     background-position: 50% 0;
+
+    @media (min-resolution: 2dppx) {
+      background-size: auto 302px, auto;
+      background-image: url("../img/Index/promo-background@2x.jpg"), linear-gradient($color-primary-800 0, $color-primary-800 302px, $color-white 302px);
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -35,6 +40,11 @@
       background-position: 0 100%;
       background-repeat: no-repeat;
       background-image: url("../img/Index/promo-background-large.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-size: auto 696px;
+        background-image: url("../img/Index/promo-background-large@2x.jpg");
+      }
     }
   }
 
@@ -97,32 +107,26 @@
   }
 
   &__image {
-    @media (min-width: $tablet-width) {
-      display: none;
+    width: 280px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      position: absolute;
+      z-index: -1;
+      bottom: 0;
+      left: 0;
+
+      width: 708px;
+      height: 609px;
     }
 
-    &--medium {
-      display: none;
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      z-index: -1;
+      top: 29px;
+      right: 220px;
 
-      @media (min-width: $tablet-width) and (max-width: $desktop-width) {
-        position: absolute;
-        z-index: -1;
-        bottom: 0;
-        left: 0;
-        display: block;
-      }
-    }
-
-    &--large {
-      display: none;
-
-      @media (min-width: $desktop-width) {
-        display: block;
-        position: absolute;
-        z-index: -1;
-        top: 29px;
-        right: 220px;
-      }
+      width: 552px;
+      height: 499px;
     }
   }
 }

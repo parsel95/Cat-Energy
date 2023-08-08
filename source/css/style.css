@@ -234,7 +234,7 @@ img {
 }
 .switcher__toggler {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   padding: 3px 6px;
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
@@ -247,16 +247,24 @@ img {
   background-color: #68b738;
   border-radius: 6px;
 }
-.switcher--after .switcher__toggler {
-  justify-content: flex-end;
-}
-.switcher--before .switcher__toggler {
-  justify-content: flex-start;
-}
 @media (min-width: 768px) {
   .switcher__toggler {
     display: none;
   }
+}
+.switcher__toggler--before::after {
+  content: "";
+  width: 0;
+  height: 6px;
+  background-color: #68b738;
+  border-radius: 6px;
+}
+.switcher__toggler--after::after {
+  content: "";
+  width: 72px;
+  height: 6px;
+  background-color: #68b738;
+  border-radius: 6px;
 }
 .switcher__bar {
   -webkit-appearance: none;
@@ -973,20 +981,15 @@ img {
     padding: 0 12px;
   }
 }
-.social__link:hover path:not(.social__path--facebook) {
-  fill: #68b738;
+.social__icon {
+  color: #666666;
 }
-.social__link:active {
+.social__icon:hover {
+  color: #68b738;
+}
+.social__icon:active {
+  color: #68b738;
   opacity: 0.3;
-}
-.social__link:active path:not(.social__path--facebook) {
-  fill: #68b738;
-}
-.social__link--facebook:hover path {
-  stroke: #68b738;
-}
-.social__link--facebook:active path {
-  stroke: #68b738;
 }
 @media (min-width: 768px) {
   .social__icon--vk {
@@ -1839,7 +1842,7 @@ img {
 @media (min-width: 768px) {
   .example__imgages {
     display: grid;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 1fr 50%;
     padding: 0 58px;
     margin: 0 0 25px 0;
     overflow: hidden;
@@ -1871,6 +1874,18 @@ img {
 }
 .example__image--active {
   display: block;
+}
+.example__image--before-width {
+  width: 0;
+}
+.example__image--after-width {
+  width: 72px;
+}
+@media (min-width: 768px) {
+  .example__img--before {
+    position: relative;
+    left: 26px;
+  }
 }
 
 .contacts:not(.contacts--main) {
@@ -2509,5 +2524,8 @@ img {
   margin: 0;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
+}
+.page__svg-sprite {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

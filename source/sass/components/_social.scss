@@ -22,37 +22,20 @@
     @media (min-width: $tablet-width) {
       padding: 0 12px;
     }
-
-    &:hover {
-      path:not(.social__path--facebook) {
-        fill: $color-primary-500;
-      }
-    }
-
-    &:active {
-      opacity: 0.3;
-
-      path:not(.social__path--facebook) {
-        fill: $color-primary-500;
-      }
-    }
-
-    &--facebook {
-      &:hover {
-        path {
-          stroke: $color-primary-500;
-        }
-      }
-
-      &:active {
-        path {
-          stroke: $color-primary-500;
-        }
-      }
-    }
   }
 
   &__icon {
+    color: $color-gray-600;
+
+    &:hover {
+      color: $color-primary-500;
+    }
+
+    &:active {
+      color: $color-primary-500;
+      opacity: 0.3;
+    }
+
     &--vk {
       @media (min-width: $tablet-width) {
         width: 30px;

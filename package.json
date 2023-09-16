@@ -1,5 +1,5 @@
 {
-  "name": "{{projectName}}",
+  "name": "Cat-Energy",
   "private": true,
   "description": "Личный проект «{{projectTitle}}» от HTML Academy",
   "devDependencies": {
@@ -8,6 +8,7 @@
     "browser-sync": "2.27.7",
     "gulp": "4.0.2",
     "gulp-dart-sass": "^1.0.2",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "9.0.1",
     "linthtml-config-htmlacademy": "^1.0.3",

@@ -138,7 +138,7 @@
     "at-rule-semicolon-newline-after": "always",
     "indentation": 2,
     "max-nesting-depth": [
-      2,
+      5,
       {
         "ignoreAtRules": [
           "media"

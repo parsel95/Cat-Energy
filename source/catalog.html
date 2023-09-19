@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cat Energy: Каталог продукции</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="./favicon.ico">
     <link rel="icon" href="./img/favicon/icon-32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./img/favicon/apple-icon-180x180.png">
@@ -12,20 +12,22 @@
   </head>
   <body class="page__body">
 
-    <svg class="page__svg-sprite">
-      <symbol id="icon-facebook" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" fill="none">
-        <path class="social__path--facebook" d="M16.5 1.83325H13.75C12.5344 1.83325 11.3686 2.30674 10.5091 3.14957C9.64956 3.99239 9.16667 5.1355 9.16667 6.32743V9.02394H6.41667V12.6193H9.16667V19.81H12.8333V12.6193H15.5833L16.5 9.02394H12.8333V6.32743C12.8333 6.08905 12.9299 5.86042 13.1018 5.69186C13.2737 5.52329 13.5069 5.4286 13.75 5.4286H16.5V1.83325Z" stroke="currentcolor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
-      </symbol>
-    </svg>
+    <div class="page__svg-sprite sr-only">
+      <!-- inject:svg -->
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-facebook" viewBox="0 0 22 22"><g fill="none">
+  <path class="social__path--facebook" d="M16.5 1.83325H13.75C12.5344 1.83325 11.3686 2.30674 10.5091 3.14957C9.64956 3.99239 9.16667 5.1355 9.16667 6.32743V9.02394H6.41667V12.6193H9.16667V19.81H12.8333V12.6193H15.5833L16.5 9.02394H12.8333V6.32743C12.8333 6.08905 12.9299 5.86042 13.1018 5.69186C13.2737 5.52329 13.5069 5.4286 13.75 5.4286H16.5V1.83325Z" stroke="currentcolor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/>
+</g></symbol></svg>
+      <!-- endinject -->
+    </div>
 
     <header class="page__header page-header">
       <nav class="page-header__nav">
         <div class="page-header__bar">
           <a class="page-header__logo logo" href="index.html">
             <picture>
-              <source media="(min-width: 1300px)" srcset="./img/logo-image-large.svg">
-              <source media="(min-width: 768px)" srcset="./img/logo-image-medium.svg">
-              <img class="logo__image" src="./img/logo-image.svg" alt="Cat energy" width="33.3" height="37.6">
+              <source type="image/svg+xml" media="(min-width: 1300px)" srcset="./img/logo-image-large.svg">
+              <source type="image/svg+xml" media="(min-width: 768px)" srcset="./img/logo-image-medium.svg">
+              <img class="logo__image" src="./img/logo-image.svg" alt="Cat energy" width="33" height="37">
             </picture>
             <img class="page-header__sign logo__sign" src="./img/logo-sign.svg" alt="Cat energy" width="101"  height="18" aria-hidden="true">
           </a>
@@ -66,7 +68,7 @@
             </a>
 
             <picture class="card__img-wrapper">
-              <source media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-1-medium.png 1x, img/catalog/cards/catalog-1-medium@2x.png 2x">
+              <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-1-medium.png 1x, img/catalog/cards/catalog-1-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-1-small.png" srcset="./img/catalog/cards/catalog-1-small@2x.png 2x" alt="" width="68" height="86" aria-hidden="true">
             </picture>
 
@@ -90,8 +92,8 @@
             </a>
 
             <picture class="card__img-wrapper">
-              <source media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-2-large.png 1x, img/catalog/cards/catalog-2-large@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-2-medium.png 1x, img/catalog/cards/catalog-2-medium@2x.png 2x">
+              <source type="image/png" media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-2-large.png 1x, img/catalog/cards/catalog-2-large@2x.png 2x">
+              <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-2-medium.png 1x, img/catalog/cards/catalog-2-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-2-small.png" srcset="./img/catalog/cards/catalog-2-small@2x.png 2x" alt="" width="84" height="101" aria-hidden="true">
             </picture>
 
@@ -115,7 +117,7 @@
             </a>
 
             <picture class="card__img-wrapper">
-              <source media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-3-medium.png 1x, img/catalog/cards/catalog-3-medium@2x.png 2x">
+              <source media="(min-width: 768px)" type="image/png" srcset="./img/catalog/cards/catalog-3-medium.png 1x, img/catalog/cards/catalog-3-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-3-small.png" srcset="./img/catalog/cards/catalog-3-small@2x.png 2x" alt="" width="68" height="78" aria-hidden="true">
             </picture>
 
@@ -139,8 +141,8 @@
             </a>
 
             <picture class="card__img-wrapper">
-              <source media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-4-large.png 1x, img/catalog/cards/catalog-4-large@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-4-medium.png 1x, img/catalog/cards/catalog-4-medium@2x.png 2x">
+              <source type="image/png" media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-4-large.png 1x, img/catalog/cards/catalog-4-large@2x.png 2x">
+              <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-4-medium.png 1x, img/catalog/cards/catalog-4-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-4-small.png" srcset="./img/catalog/cards/catalog-4-small@2x.png 2x" alt="" width="84" height="101" aria-hidden="true">
             </picture>
 
@@ -164,7 +166,7 @@
             </a>
 
             <picture class="card__img-wrapper">
-              <source media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-5-medium.png 1x, img/catalog/cards/catalog-5-medium@2x.png 2x">
+              <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-5-medium.png 1x, img/catalog/cards/catalog-5-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-5-small.png" srcset="./img/catalog/cards/catalog-5-small@2x.png 2x" alt="" width="68" height="78" aria-hidden="true">
             </picture>
 
@@ -188,8 +190,8 @@
             </a>
 
             <picture class="card__img-wrapper">
-              <source media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-6-large.png 1x, img/catalog/cards/catalog-6-large@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-6-medium.png 1x, img/catalog/cards/catalog-6-medium@2x.png 2x">
+              <source type="image/png" media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-6-large.png 1x, img/catalog/cards/catalog-6-large@2x.png 2x">
+              <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-6-medium.png 1x, img/catalog/cards/catalog-6-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-6-small.png" srcset="./img/catalog/cards/catalog-6-small@2x.png 2x" alt="" width="84" height="101" aria-hidden="true">
             </picture>
 
@@ -213,7 +215,7 @@
             </a>
 
             <picture class="card__img-wrapper">
-              <source media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-7-medium.png 1x, img/catalog/cards/catalog-7-medium@2x.png 2x">
+              <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-7-medium.png 1x, img/catalog/cards/catalog-7-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-7-small.png" srcset="./img/catalog/cards/catalog-7-small@2x.png 2x" alt="" width="72" height="84" aria-hidden="true">
             </picture>
 
@@ -339,7 +341,7 @@
             <a class="page-footer__social-link social__link" href="#">
               <span class="visually-hidden">VK</span>
               <svg class="social__icon social__icon--vk" width="23" height="16">
-                <use xlink:href="./img/icons.svg#icon-vk"></use>
+                <use xlink:href="./img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
           </li>
@@ -347,7 +349,7 @@
             <a class="page-footer__social-link social__link" href="#">
               <span class="visually-hidden">Instagram</span>
               <svg class="social__icon social__icon--instagram" width="16" height="16" >
-                <use xlink:href="./img/icons.svg#icon-instagram"></use>
+                <use xlink:href="./img/sprite.svg#icon-instagram"></use>
               </svg>
             </a>
           </li>
@@ -365,13 +367,13 @@
           <span class="visually-hidden">Разработано в HTML Academy</span>
           <span class="developer__text">HTML Academy</span>
           <svg class="developer__image" width="27" height="34">
-            <use xlink:href="./img/icons.svg#icon-logo-academy"></use>
+            <use xlink:href="./img/sprite.svg#icon-logo-academy"></use>
           </svg>
         </a>
       </div>
     </footer>
 
-    <script src="./js/app.js"></script>
+    <script src="./js/app.min.js"></script>
   </body>
 </html>
 

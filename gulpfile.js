@@ -54,13 +54,23 @@ export const scripts = () => {
 // Images
 
 export const optmizeImages = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src([
+    "!source/img/iconsForSprite/**/*",
+    "!source/img/iconsForSpriteInline/**/*",
+    "!source/img/iconsForSprite/",
+    "!source/img/iconsForSpriteInline/",
+    "source/img/**/*.{jpg,png,svg}"])
     .pipe(imagemin())
     .pipe(gulp.dest("build/img"));
 }
 
 export const copyImages = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src([
+    "!source/img/iconsForSprite/",
+    "!source/img/iconsForSprite/**/*",
+    "!source/img/iconsForSpriteInline/",
+    "!source/img/iconsForSpriteInline/**/*",
+    "source/img/**/*.{jpg,png,svg}"])
     .pipe(gulp.dest("build/img"));
 }
 
@@ -103,11 +113,12 @@ export const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
+    "!source/img/iconsForSprite/**/*",
+    "!source/img/iconsForSpriteInline/**/*",
+    "!source/img/iconsForSprite/",
+    "!source/img/iconsForSpriteInline/",
     "source/img/**/*.svg",
-    "source/manifest.webmanifest",
-    "!source/img/iconsForSprite/*.svg",
-    "!source/img/iconsForSpriteInline/*.svg"
-  ], {
+    "source/manifest.webmanifest"], {
     base: "source"
   })
     .pipe(gulp.dest("build"))

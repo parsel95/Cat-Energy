@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт Cat-Energy, сделанный в рамках практики в HTML Academy">
     <title>Cat Energy: Каталог продукции</title>
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="./favicon.ico">
     <link rel="icon" href="./img/favicon/icon-32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./img/favicon/apple-icon-180x180.png">
     <link rel="manifest" href="./manifest.webmanifest">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5ce8f690-7242-4d04-9e22-237cbbbd8154&lang=ru_RU"></script>
   </head>
   <body class="page__body">
 
@@ -42,7 +44,7 @@
             <a class="site-menu__link" href="./index.html">Главная</a>
           </li>
           <li class="site-menu__item site-menu__item--active">
-            <a class="site-menu__link">Каталог продукции</a>
+            <a class="site-menu__link" href="./catalog.html">Каталог продукции</a>
           </li>
           <li class="site-menu__item">
             <a class="site-menu__link" href="./form.html">Подбор программы</a>
@@ -68,6 +70,9 @@
             </a>
 
             <picture class="card__img-wrapper">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-1-medium.webp 1x, img/catalog/cards/catalog-1-medium@2x.webp 2x">
+              <source type="image/webp" srcset="./img/catalog/cards/catalog-1-small.webp 1x, img/catalog/cards/catalog-1-small@2x.webp 2x">
+
               <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-1-medium.png 1x, img/catalog/cards/catalog-1-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-1-small.png" srcset="./img/catalog/cards/catalog-1-small@2x.png 2x" alt="" width="68" height="86" aria-hidden="true">
             </picture>
@@ -92,6 +97,10 @@
             </a>
 
             <picture class="card__img-wrapper">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-2-large.webp 1x, img/catalog/cards/catalog-2-large@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-2-medium.webp 1x, img/catalog/cards/catalog-2-medium@2x.webp 2x">
+              <source type="image/webp" srcset="./img/catalog/cards/catalog-2-small.webp 1x, img/catalog/cards/catalog-2-small@2x.webp 2x">
+
               <source type="image/png" media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-2-large.png 1x, img/catalog/cards/catalog-2-large@2x.png 2x">
               <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-2-medium.png 1x, img/catalog/cards/catalog-2-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-2-small.png" srcset="./img/catalog/cards/catalog-2-small@2x.png 2x" alt="" width="84" height="101" aria-hidden="true">
@@ -117,7 +126,10 @@
             </a>
 
             <picture class="card__img-wrapper">
-              <source media="(min-width: 768px)" type="image/png" srcset="./img/catalog/cards/catalog-3-medium.png 1x, img/catalog/cards/catalog-3-medium@2x.png 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-3-medium.webp 1x, img/catalog/cards/catalog-3-medium@2x.webp 2x">
+              <source type="image/webp" srcset="./img/catalog/cards/catalog-3-small.webp 1x, img/catalog/cards/catalog-3-small@2x.webp 2x">
+
+              <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-3-medium.png 1x, img/catalog/cards/catalog-3-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-3-small.png" srcset="./img/catalog/cards/catalog-3-small@2x.png 2x" alt="" width="68" height="78" aria-hidden="true">
             </picture>
 
@@ -141,6 +153,10 @@
             </a>
 
             <picture class="card__img-wrapper">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-4-large.webp 1x, img/catalog/cards/catalog-4-large@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-4-medium.webp 1x, img/catalog/cards/catalog-4-medium@2x.webp 2x">
+              <source type="image/webp" srcset="./img/catalog/cards/catalog-4-small.webp 1x, img/catalog/cards/catalog-4-small@2x.webp 2x">
+
               <source type="image/png" media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-4-large.png 1x, img/catalog/cards/catalog-4-large@2x.png 2x">
               <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-4-medium.png 1x, img/catalog/cards/catalog-4-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-4-small.png" srcset="./img/catalog/cards/catalog-4-small@2x.png 2x" alt="" width="84" height="101" aria-hidden="true">
@@ -166,6 +182,9 @@
             </a>
 
             <picture class="card__img-wrapper">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-5-medium.webp 1x, img/catalog/cards/catalog-5-medium@2x.webp 2x">
+              <source type="image/webp" srcset="./img/catalog/cards/catalog-5-small.webp 1x, img/catalog/cards/catalog-5-small@2x.webp 2x">
+
               <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-5-medium.png 1x, img/catalog/cards/catalog-5-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-5-small.png" srcset="./img/catalog/cards/catalog-5-small@2x.png 2x" alt="" width="68" height="78" aria-hidden="true">
             </picture>
@@ -190,6 +209,10 @@
             </a>
 
             <picture class="card__img-wrapper">
+              <source type="image/webp" media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-6-large.webp 1x, img/catalog/cards/catalog-6-large@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-6-medium.webp 1x, img/catalog/cards/catalog-6-medium@2x.webp 2x">
+              <source type="image/webp" srcset="./img/catalog/cards/catalog-6-small.webp 1x, img/catalog/cards/catalog-6-small@2x.webp 2x">
+
               <source type="image/png" media="(min-width: 1300px)" srcset="./img/catalog/cards/catalog-6-large.png 1x, img/catalog/cards/catalog-6-large@2x.png 2x">
               <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-6-medium.png 1x, img/catalog/cards/catalog-6-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-6-small.png" srcset="./img/catalog/cards/catalog-6-small@2x.png 2x" alt="" width="84" height="101" aria-hidden="true">
@@ -215,6 +238,9 @@
             </a>
 
             <picture class="card__img-wrapper">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-7-medium.webp 1x, img/catalog/cards/catalog-7-medium@2x.webp 2x">
+              <source type="image/webp" srcset="./img/catalog/cards/catalog-7-small.webp 1x, img/catalog/cards/catalog-7-small@2x.webp 2x">
+
               <source type="image/png" media="(min-width: 768px)" srcset="./img/catalog/cards/catalog-7-medium.png 1x, img/catalog/cards/catalog-7-medium@2x.png 2x">
               <img class="card__img" src="./img/catalog/cards/catalog-7-small.png" srcset="./img/catalog/cards/catalog-7-small@2x.png 2x" alt="" width="72" height="84" aria-hidden="true">
             </picture>
@@ -326,7 +352,7 @@
           </div>
         </div>
 
-        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A48c5c3c7a15523db812da10e44b5a0afed530a5d9a4530ec32c2a8cc099830aa&amp;source=constructor"></iframe>
+        <iframe class="contacts__map"  loading="lazy" title="Магазин на карте" src="https://yandex.ru/map-widget/v1/?um=constructor%3A48c5c3c7a15523db812da10e44b5a0afed530a5d9a4530ec32c2a8cc099830aa&amp;source=constructor"></iframe>
       </footer>
     </main>
 

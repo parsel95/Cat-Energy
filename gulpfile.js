@@ -10,7 +10,7 @@ import rename from "gulp-rename";
 import terser from "gulp-terser";
 import imagemin from 'gulp-imagemin';
 import webp from "gulp-webp";
-import svgstore from"gulp-svgstore";
+import svgstore from "gulp-svgstore";
 import inject from "gulp-inject";
 import { deleteAsync } from 'del';
 import browser from "browser-sync";
@@ -55,22 +55,24 @@ export const scripts = () => {
 
 export const optmizeImages = () => {
   return gulp.src([
+    "source/img/**/*.{jpg,png,svg}",
     "!source/img/iconsForSprite/**/*",
     "!source/img/iconsForSpriteInline/**/*",
     "!source/img/iconsForSprite/",
-    "!source/img/iconsForSpriteInline/",
-    "source/img/**/*.{jpg,png,svg}"])
+    "!source/img/iconsForSpriteInline/"
+    ])
     .pipe(imagemin())
     .pipe(gulp.dest("build/img"));
 }
 
 export const copyImages = () => {
   return gulp.src([
+    "source/img/**/*.{jpg,png,svg}",
     "!source/img/iconsForSprite/",
     "!source/img/iconsForSprite/**/*",
     "!source/img/iconsForSpriteInline/",
-    "!source/img/iconsForSpriteInline/**/*",
-    "source/img/**/*.{jpg,png,svg}"])
+    "!source/img/iconsForSpriteInline/**/*"
+    ])
     .pipe(gulp.dest("build/img"));
 }
 
@@ -111,13 +113,13 @@ export const spriteInline = () => {
 
 export const copy = (done) => {
   gulp.src([
+    "source/img/**/*.svg",
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "!source/img/iconsForSprite/**/*",
     "!source/img/iconsForSpriteInline/**/*",
     "!source/img/iconsForSprite/",
     "!source/img/iconsForSpriteInline/",
-    "source/img/**/*.svg",
     "source/manifest.webmanifest"], {
     base: "source"
   })
@@ -156,7 +158,7 @@ const reload = (done) => {
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/js/app.js", gulp.series(scripts));
   gulp.watch("source/*.html", gulp.series(html)).on("change", browser.reload);
 }
 

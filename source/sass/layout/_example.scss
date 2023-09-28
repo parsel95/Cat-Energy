@@ -210,6 +210,8 @@
     position: relative;
 
     @media (max-width: $mobile-width-only) {
+      display: flex;
+      justify-content: center;
       margin: 0 0 13px 0;
     }
 
@@ -247,7 +249,7 @@
     }
 
     &--active {
-      display: block;
+      display: flex;
     }
 
     &--before-width {

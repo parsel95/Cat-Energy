@@ -10,9 +10,17 @@
     background-repeat: no-repeat;
     background-position: 50% 0;
 
+    @supports (background-image: url("../img/Index/promo-background.webp")) {
+      background-image: url("../img/Index/promo-background.webp"), linear-gradient($color-primary-800 0, $color-primary-800 302px, $color-white 302px);
+    }
+
     @media (min-resolution: 2dppx) {
       background-size: auto 302px, auto;
       background-image: url("../img/Index/promo-background@2x.jpg"), linear-gradient($color-primary-800 0, $color-primary-800 302px, $color-white 302px);
+
+      @supports (background-image: url("../img/Index/promo-background@2x.webp")) {
+        background-image: url("../img/Index/promo-background@2x.webp"), linear-gradient($color-primary-800 0, $color-primary-800 302px, $color-white 302px);
+      }
     }
   }
 
@@ -41,9 +49,18 @@
       background-repeat: no-repeat;
       background-image: url("../img/Index/promo-background-large.jpg");
 
+      @supports (background-image: url("../img/Index/promo-background-large.webp")) {
+        background-image: url("../img/Index/promo-background-large.webp");
+      }
+
+
       @media (min-resolution: 2dppx) {
         background-size: auto 696px;
         background-image: url("../img/Index/promo-background-large@2x.jpg");
+
+        @supports (background-image: url("../img/Index/promo-background-large@2x.webp")) {
+          background-image: url("../img/Index/promo-background-large@2x.webp");
+        }
       }
     }
   }

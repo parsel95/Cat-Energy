@@ -3,12 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Сайт Cat-Energy, сделанный в рамках практики в HTML Academy">
     <title>Cat Energy: Подбор программы питания</title>
     <link rel="stylesheet" href="./css/style.min.css">
     <link rel="icon" href="./favicon.ico">
     <link rel="icon" href="./img/favicon/icon-32.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./img/favicon/apple-icon-180x180.png">
     <link rel="manifest" href="./manifest.webmanifest">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=5ce8f690-7242-4d04-9e22-237cbbbd8154&lang=ru_RU"></script>
   </head>
   <body class="page__body">
 
@@ -45,7 +47,7 @@
             <a class="site-menu__link" href="./catalog.html">Каталог продукции</a>
           </li>
           <li class="site-menu__item  site-menu__item--active">
-            <a class="site-menu__link">Подбор программы</a>
+            <a class="site-menu__link" href="./form.html">Подбор программы</a>
           </li>
         </ul>
       </nav>
@@ -201,7 +203,7 @@
           </div>
         </div>
 
-        <iframe class="contacts__map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A48c5c3c7a15523db812da10e44b5a0afed530a5d9a4530ec32c2a8cc099830aa&amp;source=constructor"></iframe>
+        <iframe class="contacts__map" loading="lazy" title="Магазин на карте" src="https://yandex.ru/map-widget/v1/?um=constructor%3A48c5c3c7a15523db812da10e44b5a0afed530a5d9a4530ec32c2a8cc099830aa&amp;source=constructor"></iframe>
       </footer>
     </main>
 
